@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowSkin</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-tint"></i> GlowSkin
+    </div>
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#keranjang">Keranjang</a>
+      <a href="#checkout">Checkout</a>
+    </nav>
+  </header>
+ 
+  <main id="beranda">
+    <section class="promo-banner">
+      <div class="promo-text">
+        <h1>Bebas Ongkir TANPA SYARAT!</h1>
+        <h2>Minimal pemesanan 2 pcs, mendapatkan free sheetmask glowskin!</h2>
+        <h2>Diskon 30% untuk Produk Baru!</h2>
+      </div>
+      <img src="satuan.png" alt="Produk Promo" class="promo-img" />
+    </section>
+
+    <section class="kategori">
+      <a href="#cleanser-detail" class="kategori-item">Cleanser</a>
+      <a href="#toner-detail" class="kategori-item">Toner</a>
+      <a href="#serum-detail" class="kategori-item">Serum</a>
+      <a href="#moisturizer-detail" class="kategori-item">Moisturizer</a>
+      <a href="#sunscreen-detail" class="kategori-item">Sunscreen</a>
+      <a href="#masker-detail" class="kategori-item">Masker Wajah</a>
+    </section>
+  </main>
+
+  <main id="produk">
+    <h2>Daftar Produk</h2>
+    <h2>Bestie's Bucket List, ON SALE</h2>
+    <div class="produk-list">
+      <div class="produk-item" data-url=:detail-cleanser.html>
+        <img src="FaceWash.jpeg" alt="HydraClean" />
+        <h3>HydraClean Face Wash</h3>
+        <p>Rp 105.000</p>
+        <button class="btn" onclick="tambahKeKeranjang('HydraClean', 105000)">Add to Bag</button>
+      </div>
+
+      <div class="produk-item"  data-url=:detail-toner.html>
+        <img src="Toner.png" alt="Toner" />
+        <span class="label">Produk Terlaris</span>
+        <h3>PureTone Facial Toner</h3>
+        <p>Rp 105.000</p>
+        <button class="btn" onclick="tambahKeKeranjang('Toner', 55000)">Add to Bag</button>
+      </div>
+
+      <div class="produk-item"  data-url=:detail-serum.html>
+        <img src="Serum.png" alt="Serum" />
+        <h3>BrightGlow Serum Vit C</h3>
+        <p>Rp 75.000</p>
+        <button class="btn" onclick="tambahKeKeranjang('Serum', 75000)">Add to Bag</button>
+      </div>
+
+      <div class="produk-item"  data-url=:detail-moisturizer.html>
+        <img src="Moisturizer.png" alt="Moisturizer" />
+        <span class="label">Produk Terlaris</span>
+        <h3>Radiance Moisturizer Cream</h3>
+        <p>Rp 60.000</p>
+        <button class="btn" onclick="tambahKeKeranjang('Moisturizer', 60000)">Add to Bag</button>
+      </div>
+
+      <div class="produk-item"  data-url=:detail-sunscreen.html>
+        <img src="Sunscreen.jpg" alt="Sunscreen" />
+        <h3>SunCare Daily SPF50+</h3>
+        <p>Rp 80.000</p>
+        <button class="btn" onclick="tambahKeKeranjang('Sunscreen', 60000)">Add to Bag</button>
+      </div>
+
+      <div class="produk-item" data-url=:detail-masker.html>
+        <img src="Mask.png" alt="Mask" />
+        <h3>Soothing Sheet Mask</h3>
+        <p>Rp 35.000</p>
+        <button class="btn" onclick="tambahKeKeranjang('Mask', 35000)">Add to Bag</button>      
+      </div>
+    </div>
+  </section>
+
+<!-- Detail Produk (Contoh) -->
+  <section class="detail-produk" id="cleanser-detail">
+    <div class="container">
+      <div class="product-image">
+        <img src="FaceWash.jpeg" alt="HydraClean Face Wash">
+      </div>
+      <div class="product-info">
+        <h1>HydraClean Face Wash</h1>
+        <p class="price">Rp 105.000</p>
+        <p>Sabun wajah lembut dengan pH seimbang yang membersihkan kulit tanpa membuat kulit kering.</p>
+        <p>Ukuran: 236ml</p>
+        <p>Kandungan Utama: Aloe Vera, Chamomile Extract</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-produk" id="toner-detail">
+    <div class="container">
+      <div class="product-image">
+        <img src="Toner.png" alt="PureTone Facial Toner">
+      </div>
+      <div class="product-info">
+        <h1>PureTone Facial Toner</h1>
+        <p class="price">Rp 105.000</p>
+        <p>Toner menyegarkan untuk mengangkat sisa kotoran dan menyeimbangkan kelembapan kulit.</p>
+        <p>Ukuran: 120ml</p>
+        <p>Kandungan Utama: Witch Hazel, Green Tea Extract</p>
+      </div>
+    </div>
+  </section>
+
+<section class="detail-produk" id="serum-detail">
+    <div class="container">
+      <div class="product-image">
+        <img src="Serum.png" alt="BrightGlow Serum Vitamin C">
+      </div>
+      <div class="product-info">
+        <h1>BrightGlow Serum Vitamin C</h1>
+        <p class="price">Rp 75.000</p>
+        <p>Serum pencerah dengan kandungan Vitamin C murni untuk kulit cerah dan merata.</p>
+        <p>Ukuran: 30ml</p>
+        <p>Kandungan Utama : Vitamin C, Niacinamide, Hyaluronic Acid</p>
+      </div>
+    </div>
+  </section>
+
+<section class="detail-produk" id="moisturizer-detail">
+    <div class="container">
+      <div class="product-image">
+        <img src="Moisturizer.png" alt="Radiance Moisturizer Cream">
+      </div>
+      <div class="product-info">
+        <h1>Radiance Moisturizer Cream</h1>
+        <p class="price">Rp 75.000</p>
+        <p>Pelembab ringan berbasis cream yang cepat meresap dan membantu
+           mencerahkan wajah sepanjang hari.</p>
+        <p>Ukuran: 50ml</p>
+        <p>Kandungan Utama : Glutathione, Niacinamide, TranexamicAcid</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Detail Produk (Contoh) -->
+<section class="detail-produk" id="sunscreen-detail">
+    <div class="container">
+      <div class="product-image">
+        <img src="Sunscreen.jpg" alt="SunCare Daily SPF50+">
+      </div>
+      <div class="product-info">
+        <h1>SunCare Daily SPF50+++</h1>
+        <p class="price">Rp 80.000</p>
+        <p>Sunsreen dengan perlindungan UVA & UVB, cocok untuk semua jenis kulit.</p>
+        <p>Ukuran: 50ml</p>
+        <p>Kandungan Utama : Zinc Oxide, Vitamin E</p>
+      </div>
+    </div>
+  </section>
+
+<section class="detail-produk" id="masker-detail">
+    <div class="container">
+      <div class="product-image">
+        <img src="Mask.png" alt="Shoothing Sheet Mask">
+      </div>
+      <div class="product-info">
+      <h1>Shoothing Sheet Mask</h1>
+        <p class="price">Rp 35.000</p>
+        <p>Masker wajah berbahan lembut yang menenangkan dan melembapkan kulit dalam 15 menit.</p>
+        <p>Ukuran: 1 lembar</p>
+        <p>Kandungan Utama : Centella Asiatica, Aloe Vera</p>
+      </div>
+  </main>
+
+  <section id="keranjang">
+    <h2>Keranjang Belanja</h2>
+    <div class="keranjang" id="keranjang-list">
+      <p>Belum ada produk dipilih.</p>
+    </div>
+  </main>
+
+  <main id="checkout">
+    <h2>Checkout</h2>
+    <div class="checkout">
+      <form>
+        <label>Nama Lengkap:<br>
+          <input type="text" name="nama" required>
+        </label><br><br>
+        <label>Alamat:<br>
+          <textarea name="alamat" rows="3" required></textarea>
+        </label><br><br>
+        <label>Metode Pembayaran:<br>
+          <select name="pembayaran">
+            <option>Transfer Bank</option>
+            <option>OVO</option>
+            <option>Gopay</option>
+          </select>
+        </label><br><br>
+        <button class="btn" type="button" id="btnBayar">Bayar Sekarang</button>
+      </form>
+      <div id="struk" style="display:none; margin-top: 20px; border: 1px solid #ccc; padding: 15px;"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GlowSkin - Toko Skincare Online</p>
+  </footer>
+
+  <script>
+    const keranjang = [];
+
+    function tambahKeKeranjang(nama, harga) {
+      keranjang.push({ nama, harga });
+      updateKeranjang();
+    }
+
+    function updateKeranjang() {
+      const keranjangList = document.getElementById('keranjang-list');
+      if (keranjang.length === 0) {
+        keranjangList.innerHTML = '<p>Belum ada produk dipilih.</p>';
+        return;
+      }
+
+      let total = 0;
+      keranjangList.innerHTML = '<ul>' + keranjang.map(item => {
+        total += item.harga;
+        return `<li>${item.nama} - Rp${item.harga.toLocaleString()}</li>`;
+      }).join('') + `</ul><p><strong>Total: Rp${total.toLocaleString()}</strong></p>`;
+    }
+
+    document.getElementById('btnBayar').addEventListener('click', function () {
+      const nama = document.querySelector('[name="nama"]').value;
+      const alamat = document.querySelector('[name="alamat"]').value;
+      const pembayaran = document.querySelector('[name="pembayaran"]').value;
+
+      if (keranjang.length === 0) {
+        alert("Keranjang masih kosong!");
+        return;
+      }
+
+      if (!nama || !alamat) {
+        alert("Mohon lengkapi data Anda!");
+        return;
+      }
+
+      const total = keranjang.reduce((acc, item) => acc + item.harga, 0);
+
+      const struk = `
+        <h3>Struk Pembelian</h3>
+        <p><strong>Nama:</strong> ${nama}</p>
+        <p><strong>Alamat:</strong> ${alamat}</p>
+        <p><strong>Metode Pembayaran:</strong> ${pembayaran}</p>
+        <ul>
+          ${keranjang.map(item => `<li>${item.nama} - Rp${item.harga.toLocaleString()}</li>`).join('')}
+        </ul>
+        <p><strong>Total:</strong> Rp${total.toLocaleString()}</p>
+        <p>Terima kasih telah berbelanja di GlowSkin!</p>
+      `;
+
+      document.getElementById('struk').innerHTML = struk;
+      document.getElementById('struk').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
